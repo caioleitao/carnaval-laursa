@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://0fsmf1cv84m1"]
+
+[ext_resource type="Script" uid="uid://3yywfvsfliul" path="res://Tycoon/GarageController.gd" id="1_controller"]
+[ext_resource type="Script" uid="uid://cnckicjvnkemk" path="res://Tycoon/laursapc.gd" id="1_rh2ju"]
+[ext_resource type="Texture2D" uid="uid://cwenr8pmgvp3p" path="res://Tycoon/Ghosthome.webp" id="1_u20r3"]
+[ext_resource type="PackedScene" uid="uid://dn2wexa4dm88s" path="res://Assets/Prefabs/Characters/player3.tscn" id="2_rh2ju"]
+[ext_resource type="FontFile" uid="uid://8wejfulphdwh" path="res://Assets/Ac437_ACM_VGA_8x8.ttf" id="4_eb3f6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_83p0m"]
+
+[sub_resource type="FontVariation" id="FontVariation_eb3f6"]
+base_font = ExtResource("4_eb3f6")
+
+[sub_resource type="FontVariation" id="FontVariation_s27hs"]
+base_font = SubResource("FontVariation_eb3f6")
+
+[sub_resource type="FontVariation" id="FontVariation_83p0m"]
+base_font = ExtResource("4_eb3f6")
+
+[sub_resource type="FontVariation" id="FontVariation_dhat4"]
+base_font = ExtResource("4_eb3f6")
+
+[node name="Control" type="Control" unique_id=170345103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_controller")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=206233162]
+material = SubResource("ShaderMaterial_83p0m")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.501961, 0.501961, 1)
+script = ExtResource("1_rh2ju")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2103416968]
+position = Vector2(839, 320)
+scale = Vector2(0.466406, 0.466406)
+texture = ExtResource("1_u20r3")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1918811458]
+position = Vector2(-109, 207)
+scale = Vector2(1.2398754, 0.9710145)
+polygon = PackedVector2Array(98, 132, 108.07537, 216.26866, 450.8517, 286.29852, 461.33664, 80.328354)
+
+[node name="BtnOther" type="Button" parent="." unique_id=2015495537]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 580.0
+offset_top = -443.0
+offset_right = 1069.0
+offset_bottom = -412.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.443137, 0.647059, 0.752941, 1)
+theme_override_colors/font_outline_color = Color(0.568627, 0.768627, 0.862745, 1)
+theme_override_fonts/font = SubResource("FontVariation_s27hs")
+text = "Partir para folia"
+flat = true
+
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=411035379]
+position = Vector2(66, -2)
+polygon = PackedVector2Array(25, 534, 47, 613, 277, 631, 401, 539, 55, 512)
+
+[node name="BtnSocial" type="Button" parent="." unique_id=508777355]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -109.0
+offset_right = 727.0
+offset_bottom = -53.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.411765, 0.627451, 0.737255, 1)
+theme_override_colors/font_outline_color = Color(0.568627, 0.768627, 0.862745, 1)
+theme_override_fonts/font = SubResource("FontVariation_s27hs")
+text = "Promote the La Ursa 
+on social media"
+flat = true
+alignment = 0
+
+[node name="Label2" type="Label" parent="." unique_id=325653504]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 181.0
+offset_right = 648.0
+offset_bottom = 248.0
+theme_override_fonts/font = SubResource("FontVariation_83p0m")
+theme_override_font_sizes/font_size = 32
+text = "Travel Agency 
+of Recife"
+
+[node name="BtnStage1" type="Button" parent="." unique_id=651815904]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 348.0
+offset_right = 89.0
+offset_bottom = 379.0
+theme_override_colors/font_color = Color(0, 0.5019608, 0.5019608, 1)
+text = "Stage 1"
+flat = true
+
+[node name="BtnStage3" type="Button" parent="." unique_id=1068773720]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 398.0
+offset_right = 288.0
+offset_bottom = 429.0
+theme_override_colors/font_color = Color(0, 0.5019608, 0.5019608, 1)
+text = "Stage 3"
+flat = true
+
+[node name="BtnStage2" type="Button" parent="." unique_id=1880247558]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 329.0
+offset_right = 268.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0.5019608, 0.5019608, 1)
+text = "Stage 2"
+flat = true
+
+[node name="Player" parent="." unique_id=2019191508 instance=ExtResource("2_rh2ju")]
+position = Vector2(773, 123)
+disable_mode = 1
+slide_on_ceiling = false
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1767171692]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 35.0
+offset_right = 545.0
+offset_bottom = 142.0
+theme_override_fonts/font = SubResource("FontVariation_dhat4")
+theme_override_font_sizes/font_size = 32
+text = "La Ursa OS"
+
+[node name="CoinLabel" type="Label" parent="." unique_id=148359847]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 80.0
+offset_right = 545.0
+offset_bottom = 112.0
+theme_override_fonts/font = SubResource("FontVariation_dhat4")
+theme_override_font_sizes/font_size = 24
+text = "Coins: 0"
